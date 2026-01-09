@@ -60,63 +60,80 @@
 ## Video 9:
 
 - Declaring variables, how JS works with vars.
-- No need for Int, String, Bool etc. JS runtime looks at the variable itself and goes "aha, that is a number".
+- var vs const vs let,
+- var is overall variable, can be used anywhere, can be any type and can be changed same as any other
+- let is similar to var, just code block scope and after declaration
+- const is constant, cannot be changed, same scope as let
+- const default, let in loops, var is bit too openly available
 
 ---
 ## Video 10:
 
 - Using said variables in code and chit chat about different types of variables.
-- var vs const vs let
+- 
 
 ---
-## Video 6:
+## Video 11:
 
--
-
----
-## Video 6:
-
--
+- Text variable (strings) formatting
+- JS can be funky with concanetation with strings and numbers
 
 ---
-## Video 6:
+## Video 12:
 
--
-
----
-## Video 6:
-
--
+- utilisation of string formatting in code and examples
+- 
 
 ---
-## Video 6:
+## Video 13:
 
--
-
----
-## Video 6:
-
--
+- Template literals, uses backticks and ${} placeholders
+- `Hello ${string1}` => Hello World!, if string1 has been set to be "World!"
+- often just easier to use the variable names instead of template literals... but I guess it's just what you want to do.
 
 ---
-## Video 6:
+## Video 14:
 
--
-
----
-## Video 6:
-
--
+- Usage of template literals in examples
+- Allows handling of modifiers or functions in the template literal line => the result of the change is printed or shown in console/webpage/app whatever.
 
 ---
-## Video 6:
+## Video 15:
 
--
+- Data types
+- Variable types are automatically assigned, and they can be re-assigned later.
+- Checking type can be a bit confusing as it gives the type that was used to create variable and not what the variable type is.
+- double = => coerce types, triple = => "safe" comparison.
 
 ---
-## Video 6:
+## Video 16:
 
--
+- Examples showing the quirky JS constructor based check in instanceof vs typeof.
+
+---
+## Video 17:
+
+- Math quirks in JS.
+- Normal math operators and Math object (Math.whatever())
+
+---
+## Video 18:
+
+- Demo of the math operators and object
+- 
+
+---
+## Video 19:
+
+- Changing type of variable between two types, number => string or integer => float (1 2 3 4... to 1.2 or 45.321)
+- Strings to numbers with ParseInt, works for hexadecimal etc.
+- ParseFloat for floats 
+
+---
+## Video 20:
+
+- Demo of the number conversions and string conversions.
+- 
 
 ---
 ## Video 6:
