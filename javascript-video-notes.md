@@ -136,56 +136,220 @@
 - 
 
 ---
-## Video 6:
+## Video 21:
 
--
-
----
-## Video 6:
-
--
+- Error handling with try/catch/finally clauses.
+- Try - block of code that may throw exception-
+- Catch - block of code that runs if exception is thrown-
+- Finally - optional codeblock that will run after try/catch blocks - <- always runs.
 
 ---
-## Video 6:
+## Video 22:
 
--
-
----
-
-## Video 6:
-
--
+- Demo of try/catch/finally.
+- Examples of why one might want to throw exceptions in code.
 
 ---
-## Video 6:
+## Video 23:
 
--
+- Date handling in JS.
+- Month stats from zero.
+- Date counted from Jan 1st 1970 in milliseconds.
 
 ---
 
-## Video 6:
+## Video 24:
 
--
-
----
-## Video 6:
-
--
+- Demo of the simple date functions in JS.
 
 ---
-## Video 6:
+## Video 25:
 
--
+- Booleans. True False / if logic and operators.
+- double equals and triple equals from way above... ^
+- 
 
 ---
 
-v## Video 6:
+## Video 26:
 
--
+- Demo of that...
+- Highlighting the oddities with == / === or != / !==
+- Handy inline simple if check.
+
+---
+## Video 27:
+
+- Other boolean stuff / Switch.
+- Empty string = false, 0 is false, null object is false...
+- && and ||
+- Switch allows simpler syntax for lot of simple if statements with cases. ONLY does equality
+
+---
+## Video 28:
+
+- Demo of more ifs and bool loops and switch statements.
+- Remember breaks in switch statements.
 
 ---
 
-## Video 6:
+v## Video 29:
+
+- Arrays. so lists, collections etc.
+- Indexed, starts at 0.
+
+---
+
+## Video 30:
+
+- Demo of array creation, array length usage and index usage.
+- 
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
+
+-
+
+## Video 30:
 
 -
 
