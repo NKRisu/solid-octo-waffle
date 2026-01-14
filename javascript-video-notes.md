@@ -264,19 +264,27 @@ v## Video 29:
 
 ## Video 41:
 
--
+- JSON (JavaScript Object Notation).
+- Ordered list of values of the object requested.
+- JSON.stringify()
+- JSON.parse()
 
 ## Video 42:
 
--
+- Demo of creating JSONs, turning them into objects....
 
 ## Video 43:
 
--
+- JavaScript objects.
+- Properties, associated methods... representations of "things" in code.
+- Object literal, created with {} with definitions in-between.
+- new Object constructor creates a template for a new object.
 
 ## Video 44:
 
--
+- Demo of object creation.
+- Property fetching.
+- Dot and bracket notation
 
 ## Video 45:
 
