@@ -205,153 +205,103 @@ v## Video 29:
 - Demo of array creation, array length usage and index usage.
 - 
 
-## Video 30:
+## Video 31:
+
+- Adding values to arrays.
+- Overwriting values in array, using indexes.
+- 
+
+## Video 32:
+
+- Demo of array creation etc.
+- 
+
+## Video 33:
+
+- Different methods you can use on arrays.
+- pop removes last, push adds to end of array, shift removes first, unshift moves everything up an index and adds new item to start of an array.
+- concat combines two arrays.
+
+## Video 34:
+
+- Deeper look into array methods with demos.
+- 
+
+## Video 35:
+
+- Basics of loops.
+- WHILE/FOR.
+- Iteration over lists, executing same code multiple times.
+
+## Video 36:
+
+- Demo.
+- While when function returns false or NULL at end.
+- For when loop number is known.
+- Iteration over an array or collection of something.
+
+## Video 37:
+
+- Basics of functions.
+- Syntax, defining and invoking functions.
+- Naming.
+- Parameters and return statements.
+
+## Video 38:
+
+- Demo of basic functions in VSCode.
+
+## Video 39:
+
+- Arrow functions.
+- Shorter syntax for simple functions which are immediately used or assigned to vars.
+- 
+
+## Video 40:
+
+- Demo of arrow funcs.
+- 
+
+## Video 41:
 
 -
 
-## Video 30:
+## Video 42:
 
 -
 
-## Video 30:
+## Video 43:
 
 -
 
-## Video 30:
+## Video 44:
 
 -
 
-## Video 30:
+## Video 45:
 
 -
 
-## Video 30:
+## Video 46:
 
 -
 
-## Video 30:
+## Video 47:
 
 -
 
-## Video 30:
+## Video 48:
 
 -
 
-## Video 30:
+## Video 49:
 
 -
 
-## Video 30:
+## Video 50:
 
 -
 
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
-
-## Video 30:
-
--
 
 ---
 
