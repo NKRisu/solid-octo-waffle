@@ -288,32 +288,49 @@ v## Video 29:
 
 ## Video 45:
 
--
+- Promises, asynchronous functions which take time and wait for function to get a result before doing things.
+- Long running operations block execution, which blocks other tasks... so allowing functions to push themselves to background is useful.
+- Oldtimey way was with callbacks, now with promises.
+- Promise = object with resolve and reject part.
 
 ## Video 46:
 
--
+- Demo of the promises working.
+- 
 
 ## Video 47:
 
--
+- Async functions.
+- Promises can add bloat, wait times, managing waittimes...
+- async/await is "cleaner" and syntax is basically normal code.
+- 
 
 ## Video 48:
 
--
+- Demo of async operations, weird stuff happening if one might have forgotten "await" keyword.
+- 
 
 ## Video 49:
 
--
+- Packages! Boxes!
+- Package usage.
+- Collection of the function code, assets and extra bits that can be used as a part of your application.
+- npm init command creates package.json file, and then you can install packages etc etc...
 
 ## Video 50:
 
--
+- More packages!
+- Demo of getting packages via NPM, simple usage of them and setting up .env and .gitignore.
 
+## Video 51:
+
+- What now? series done.
+- Next steps.
+ 
 
 ---
 
-Submit only the link to the Markdown file in the submission box. Link:
+Submit only the link to the Markdown file in the submission box. Link: https://github.com/NKRisu/solid-octo-waffle/edit/main/javascript-video-notes.md
 
 
 
