@@ -330,7 +330,7 @@ v## Video 29:
 
 ---
 
-Submit only the link to the Markdown file in the submission box. Link: https://github.com/NKRisu/solid-octo-waffle/edit/main/javascript-video-notes.md
+Submit only the link to the Markdown file in the submission box. Link: https://github.com/NKRisu/solid-octo-waffle/blob/main/javascript-video-notes.md
 
 
 
