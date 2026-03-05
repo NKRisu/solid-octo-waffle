@@ -51,18 +51,21 @@ sequenceDiagram
     F->>B: GET /api/resources (JSON)
     B->>DB: Request for data
 
-    alt Get fails
-        B-->>F: 500 Internal Server Error + errors[]
-        F-->>U: Show error in console if request failed
-    else Get OK
-        DB->>B: Gives the data (JSON)
 
-        alt Resource not modified (cached)
+    alt GET fails
+        B-->>F: 00 Internal Server Error + errors[]
+        F-->>U: Show error in console if request failed
+    else GET OK
+        DB-->>B: Gives data
+        B-->>F: Gives data
+        F-->>U: Shows data
+
+        alt Resource not modified
             B-->>F: 304 Not Modified
-            F-->>U: Use cached data; shows the existing resources
+            F-->>U: Show the cached data
         else Resource modified
-            B-->>F: 200 OK + data
-            F-->>U: Shows the existing resources
+            B-->>F: 200 OK + data given
+            F-->>U: Show the existing resources (or none if none are there)
         end
     end
 ```
