@@ -49,20 +49,20 @@ sequenceDiagram
 
     U->>F: Page reload requests data
     F->>B: GET /api/resources (JSON)
-    B->>DB: requast for data
+    B->>DB: Request for data
 
     alt Get fails
-        B-->>F: 500 Internal Server error + errors[]
-        F-->>U: Show error in console if request failed, if empty in existing reservations no errors
+        B-->>F: 500 Internal Server Error + errors[]
+        F-->>U: Show error in console if request failed, if empty in existing resources no errors show
     else Get OK
         DB->>B: Gives the data (JSON)
-        B->>F: Correct data to front end
-        F->>U: Shows the existing reservations
 
-        Success
-            S-->>B: Sends resources
+        alt Resource not modified (cached)
             B-->>F: 304 Not Modified
-            F-->>U: Show the selected resource name, description etc info in form when clicked from resource list
+            F-->>U: Use cached data; shows the existing resources
+        else Resource modified
+            B-->>F: 200 OK + data
+            F-->>U: Shows the existing resources
         end
     end
 ```
