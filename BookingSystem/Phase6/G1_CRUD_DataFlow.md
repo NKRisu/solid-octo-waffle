@@ -53,7 +53,7 @@ sequenceDiagram
 
 
     alt GET fails
-        B-->>F: 00 Internal Server Error + errors[]
+        B-->>F: 500 Internal Server Error + errors[]
         F-->>U: Show error in console if request failed
     else GET OK
         DB-->>B: Gives data
@@ -143,3 +143,4 @@ sequenceDiagram
         F-->>U: Show success message (reload page => READ loop runs)
     end
 ```
+
