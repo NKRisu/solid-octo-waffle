@@ -53,7 +53,7 @@ sequenceDiagram
 
     alt Get fails
         B-->>F: 500 Internal Server Error + errors[]
-        F-->>U: Show error in console if request failed, if empty in existing resources no errors show
+        F-->>U: Show error in console if request failed
     else Get OK
         DB->>B: Gives the data (JSON)
 
@@ -98,11 +98,11 @@ sequenceDiagram
         alt Invalid ID error
             S-->>B: error detected
             B-->>F: 400 Invalid ID
-            F-->>U: Show error message in console (cannot do this on website as client-side blocks it, so no error message on the front end)
+            F-->>U: Show error message in console
         else Duplicate resource name error
-                S-->>B: error detected
-                B-->>F: 409 Conflict
-                F-->>U: Show error message "a resource iwth the same name already exists." + sad face
+            S-->>B: error detected
+            B-->>F: 409 Conflict
+            F-->>U: Show error message "a resource with the same name already exists." + sad face
         else Success
             S-->>B: Updated resource
             B-->>F: 200 OK
@@ -135,11 +135,8 @@ sequenceDiagram
         B->>S: delete Resource(data)
         S->>DB: DELETE resource with [id]
         DB-->>S: Result
-
-        Success
-            S-->>B: Removed resource
-            B-->>F: 204 No Content
-            F-->>U: Show success message (reload page => READ loop runs)
-        end
+        S-->>B: Removed resource
+        B-->>F: 204 No Content
+        F-->>U: Show success message (reload page => READ loop runs)
     end
 ```
