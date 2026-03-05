@@ -39,17 +39,107 @@ sequenceDiagram
 # 2️⃣ READ — Resource (Sequence Diagram)
 
 ```mermaid
+sequenceDiagram
+    participant U as User (Browser)
+    participant F as Frontend (form.js and resources.js)
+    participant B as Backend (Express Route)
+    participant V as express-validator
+    participant S as Resource Service
+    participant DB as PostgreSQL
 
+    U->>F: Page reload requests data
+    F->>B: GET /api/resources (JSON)
+    B->>DB: requast for data
+
+    alt Get fails
+        B-->>F: 500 Internal Server error + errors[]
+        F-->>U: Show error in console if request failed, if empty in existing reservations no errors
+    else Get OK
+        DB->>B: Gives the data (JSON)
+        B->>F: Correct data to front end
+        F->>U: Shows the existing reservations
+
+        Success
+            S-->>B: Sends resources
+            B-->>F: 304 Not Modified
+            F-->>U: Show the selected resource name, description etc info in form when clicked from resource list
+        end
+    end
 ```
 
 # 3️⃣ UPDATE — Resource (Sequence Diagram)
 
 ```mermaid
+sequenceDiagram
+    participant U as User (Browser)
+    participant F as Frontend (form.js and resources.js)
+    participant B as Backend (Express Route)
+    participant V as express-validator
+    participant S as Resource Service
+    participant DB as PostgreSQL
 
+    U->>F: Submit form
+    F->>B: PUT /api/resources/:id (JSON)
+
+    B->>V: Validate request
+    V-->>B: Validation result
+
+    alt Validation fails
+        B-->>F: 400 Bad Request + errors[]
+        F-->>U: Show validation message
+    else Resource not found
+        B-->>F: 404 Not Found. Resource not found + error message in console + client
+        F-->>U: "The resource no longer exists. Refresh the list and try again"
+    else UPDATE OK
+        B->>S: update Resource(data)
+        S->>DB: UPDATE resources with correct :id
+        DB-->>S: Result / Update error
+
+        alt Invalid ID error
+            S-->>B: error detected
+            B-->>F: 400 Invalid ID
+            F-->>U: Show error message in console (cannot do this on website as client-side blocks it, so no error message on the front end)
+        else Duplicate resource name error
+                S-->>B: error detected
+                B-->>F: 409 Conflict
+                F-->>U: Show error message "a resource iwth the same name already exists." + sad face
+        else Success
+            S-->>B: Updated resource
+            B-->>F: 200 OK
+            F-->>U: Show success message (and then page reloads so it does the READ loop again)
+        end
+    end
 ```
 
 # 4️⃣ DELETE — Resource (Sequence Diagram)
 
 ```mermaid
+sequenceDiagram
+    participant U as User (Browser)
+    participant F as Frontend (form.js and resources.js)
+    participant B as Backend (Express Route)
+    participant V as express-validator
+    participant S as Resource Service
+    participant DB as PostgreSQL
 
+    U->>F: Submit form
+    F->>B: DELETE /api/resources/:id (JSON)
+
+    alt DELETE fails
+        B-->>F: 400 Bad Request + errors[] or 500 Internal Server error depending what you broke
+        F-->>U: Show error message "Not found (404) The resource no longer exists. Refresh and try again"
+    else Resource not found
+        B-->>F: 404 Not Found
+        F-->>U: Show error message "Not found (404) The resource no longer exists. Refresh and try again"
+    else DELETE OK
+        B->>S: delete Resource(data)
+        S->>DB: DELETE resource with [id]
+        DB-->>S: Result
+
+        Success
+            S-->>B: Removed resource
+            B-->>F: 204 No Content
+            F-->>U: Show success message (reload page => READ loop runs)
+        end
+    end
 ```
