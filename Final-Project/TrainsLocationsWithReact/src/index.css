@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.app {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-banner {
+    width: auto;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.map-box {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 70vh;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.details-card {
+    background: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem auto 2rem;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-card h3 {
+    margin-top: 0;
+}
+
+.loader {
+    color: #5f6f7f;
+}
+
+.footer-easter-egg {
+    width: auto;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 200px;
+}
+
+.footer-text {
+    font-size: 1rem;
+}
+
+.easter-egg {
+    min-height: 90vh;
+    background-image: url("./assets/images/icons/face2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 1rem;
+}
+
