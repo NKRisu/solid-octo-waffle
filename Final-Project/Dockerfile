@@ -2,11 +2,11 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
-COPY TrainsLocationsWithReact/package.json TrainsLocationsWithReact/package-lock.json* ./
-COPY TrainsLocationsWithReact/vite.config.js ./vite.config.js
-COPY TrainsLocationsWithReact/index.html ./
-COPY TrainsLocationsWithReact/public ./public
-COPY TrainsLocationsWithReact/src ./src
+COPY final-project/package.json final-project/package-lock.json* ./
+COPY final-project/vite.config.js ./vite.config.js
+COPY final-project/index.html ./
+COPY final-project/public ./public
+COPY final-project/src ./src
 
 RUN npm ci
 RUN npm run build
