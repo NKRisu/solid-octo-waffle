@@ -21,13 +21,33 @@ body {
     width: auto;
     background-color: #333;
     padding: 1rem;
-    text-align: center;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.header {
+.app-nav {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+    border-bottom: 2px solid #fff;
+}
+
+.header,
+.form-header {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -41,7 +61,8 @@ body {
 }
 
 @media (max-width: 900px) {
-    .content {
+    .content,
+    .form-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -58,18 +79,21 @@ body {
     background: #fff;
 }
 
-.details-card {
+.details-card,
+.form-card,
+.response-card {
     background: #fff;
     border: 1px solid #cccccc;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.25rem;
     margin: 1rem auto 2rem;
     width: 90%;
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.details-card h3 {
+.details-card h3,
+.response-card-header h3 {
     margin-top: 0;
 }
 
@@ -98,5 +122,154 @@ body {
     background-position: center;
     background-attachment: fixed;
     margin-top: 1rem;
+}
+
+.form-page {
+    padding: 1rem 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: #fafafa;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group.valid input,
+.form-group.valid select,
+.form-group.valid textarea {
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.5);
+    border-color: #28a745;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+    border-color: #dc3545;
+}
+
+.form-options {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.option-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.primary-button {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 0.85rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #222;
+}
+
+.status-message {
+    margin-top: 1rem;
+    color: #2d7a2d;
+}
+
+.response-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.response-card-header {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.response-body {
+    overflow-x: auto;
+}
+
+.response-summary {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.response-summary strong {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.response-summary span {
+    display: block;
+    color: #444;
+}
+
+.response-json {
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.empty-state {
+    color: #5f6f7f;
+}
+
+.page-footer {
+    margin: 1rem auto 2rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.page-footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
 }
 

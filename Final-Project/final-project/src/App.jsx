@@ -1,27 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import { useTrainLocations } from "./hooks/useTrainLocations";
 import TrainMap from "./components/trainMap";
+import FeedbackFormPage from "./components/FeedbackFormPage";
 
-export default function App() {
-  const {
-    trains,
-    stations,
-    selectedTrain,
-    selectedComposition,
-    loading,
-    error,
-    onSelectTrain,
-    onClearSelection,
-  } = useTrainLocations();
-
+function Home({ trains, stations, selectedTrain, selectedComposition, loading, error, onSelectTrain, onClearSelection }) {
   return (
-    <div className="app">
-      <div className="top-banner">Train Locations App React</div>
+    <>
       <header className="header">
         <h2>Map of all running trains in Finland.</h2>
-        <h3>Click on a train marker to see the trains details.</h3>
+        <h3>Click on a train marker to see the train details.</h3>
         <h3>The map stops refreshing after you have selected a train.</h3>
-        <h3>Click "clear train maker", in order to allow refresh on the map.</h3>
+        <h3>Click "clear selected train" to allow refresh on the map.</h3>
       </header>
 
       <div className="content">
@@ -94,6 +84,71 @@ export default function App() {
       </footer>
 
       <section className="easter-egg" />
-    </div>
+    </>
+  );
+}
+
+export default function App() {
+  const {
+    trains,
+    stations,
+    selectedTrain,
+    selectedComposition,
+    loading,
+    error,
+    onSelectTrain,
+    onClearSelection,
+  } = useTrainLocations();
+
+  return (
+    <Router>
+      <div className="app">
+        <div className="top-banner">
+          <div>Train Locations App React</div>
+          <nav className="app-nav">
+            <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+              Home
+            </NavLink>
+            <NavLink to="/test-form" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+              Test Form
+            </NavLink>
+          </nav>
+        </div>
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                trains={trains}
+                stations={stations}
+                selectedTrain={selectedTrain}
+                selectedComposition={selectedComposition}
+                loading={loading}
+                error={error}
+                onSelectTrain={onSelectTrain}
+                onClearSelection={onClearSelection}
+              />
+            }
+          />
+          <Route path="/test-form" element={<FeedbackFormPage />} />
+          <Route
+            path="*"
+            element={
+              <Home
+                trains={trains}
+                stations={stations}
+                selectedTrain={selectedTrain}
+                selectedComposition={selectedComposition}
+                loading={loading}
+                error={error}
+                onSelectTrain={onSelectTrain}
+                onClearSelection={onClearSelection}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
